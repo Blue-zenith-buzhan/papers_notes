@@ -34,11 +34,11 @@ A交给B训练一个模型，B训练模型的时候对正常的训练数据进�
 - 植入了后门的模型通常**不是彻底崩坏**，只是因为额外学了触发器的特征，导致**边界有轻微扭曲**。
 - 盲点blind spots：就是模型在输入空间中的一些区域，模型认为这些点属于某个类别，但其实它们离真实数据分布很远。后门模型因为**强行适应触发器**，会在特征空间里形成这些异常区域。是一种**后门攻击普遍存在的特征**，与攻击策略无关
 
-![3](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\3.png)
+![3](3.png)
 
-![4](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\4.png)
+![4](4.png)
 
-![1](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\1.png)
+![1](1.png)
 
 
 
@@ -58,7 +58,7 @@ ID分数：可以用置信度表示，文中用的MSP（maximum softmax probabil
 
 用一组**近 OOD**（通过“强增强”得到的分布外样本）去**测试目标分类器**：对每个 OOD 样本做PGD，看模型的 ID-置信度（max softmax）能被提升多少。若平均提升很大，说明模型存在“盲点”→ 判为被植入后门；反之则为正常模型。
 
-![2](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\2.png)
+![2](2.png)
 
 ## 具体方法
 
@@ -171,10 +171,11 @@ $$
 
 > *为做了对抗攻击的
 
-![t1](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\t1.png)
+![t1](t1.png)
 
-![t2](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\t2.png)
+![t2](t2.png)
 
 ## 伪代码
 
-![al](C:\Users\86188\Desktop\Scanning Trojaned Models Using Out-of-Distribution Samples\al.png)
+
+![al](al.png)
