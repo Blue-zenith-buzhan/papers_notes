@@ -73,7 +73,7 @@ ID分数：可以用置信度表示，文中用的MSP（maximum softmax probabil
 > 例：颜色反转、对比度调整、模糊、噪声、随机裁剪等。
 
 TRODO 定义一个增强集合（Ti为一种强增强）：
-![](http://latex.codecogs.com/svg.image?\mathcal{T}=\{T_i\}_{i=1}^{k})
+![](http://latex.codecogs.com/svg.latex?\mathcal{T}=\{T_i\}_{i=1}^{k})
 对每个干净样本x，随机排列这些增强并顺序应用：
 $$
 x' = T_{j_k}( \ldots T_{j_1}(x) )
@@ -177,6 +177,7 @@ $$
 
 
 ![al](al.png)
+
 
 
 
